@@ -1,0 +1,29 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+build/
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# Platform klasörleri: öğrenciler "flutter create ." ile oluşturur
+android/
+ios/
+web/
+linux/
+macos/
+windows/
+
+# IDE
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+
+# macOS
+.DS_Store
+
+# Eğitmen dosyaları
+egitmen/
+PLAN.md
