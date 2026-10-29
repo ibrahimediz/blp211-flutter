@@ -26,8 +26,9 @@ Bu klasörde yalnızca `lib/` ve `pubspec.yaml` bulunur. Platform klasörlerini 
 1. Uygulama çalışırken `main.dart` içinde `'Merhaba Flutter'` metnini `'Merhaba Dünya'` yap.
 2. Dosyayı kaydet (Ctrl+S / Cmd+S).
    - Beklenen: Uygulama yeniden başlamadan ekrandaki yazı birkaç saniye içinde "Merhaba Dünya" olur.
-3. Terminalde `r` tuşuna bas (hot reload) ve ardından `R` tuşuna bas (hot restart).
+3. VS Code'un üstündeki hata ayıklama çubuğunda şimşek simgesine (Hot Reload) bas, ardından yeşil dairesel ok simgesine (Hot Restart) bas.
    - Beklenen: İkisinde de uygulama çalışmaya devam eder. Hot restart uygulamayı sıfırdan başlatır.
+   - Not: Terminalde `flutter run` ile çalıştırdıysan aynı işi `r` (hot reload) ve `R` (hot restart) tuşları yapar.
 
 ## Görevler (main.dart içindeki TODO'lar)
 1. Metni kendi adınla değiştir.
