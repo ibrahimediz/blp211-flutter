@@ -29,18 +29,9 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(title: const Text('Profil Kartı')),
       body: const Center(
         // TODO 5: Kartı iki kez göster (Column içinde, aralarında SizedBox).
-        child: Column(
-          children: [
-            ProfileCard(
-              name: 'İBRAHİM EDİZ',
-              title: 'GAZİ MYO',
-            ),
-            SizedBox(height: 16),
-            ProfileCard(
-              name: 'İBRAHİM EDİZ',
-              title: 'GAZİ MYO',
-            ),
-          ],
+        child: ProfileCard(
+          name: 'Ad Soyad',
+          title: 'Öğrenci',
         ),
       ),
     );
@@ -55,31 +46,10 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.indigo.shade50,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Row(
-        children: [
-          const Icon(Icons.person, size: 48),
-          const SizedBox(width: 16),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                name,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
-              ),
-              Text(title),
-            ],
-          ),
-        ],
-      ),
-    );
+    // TODO 1: Yazıyı Container ile sar, padding 16 ve açık mavi arka plan ver.
+    // TODO 2: Köşeleri yuvarla (BoxDecoration + borderRadius).
+    // TODO 3: name ve title'ı Column ile alt alta yaz.
+    // TODO 4: Soluna bir Icon ekle (Row kullan).
+    return Text(name);
   }
 }
