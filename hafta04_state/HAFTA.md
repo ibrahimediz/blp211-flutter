@@ -24,8 +24,11 @@ Her görevden sonra `Cmd+S` ile kaydet ve ekranı kontrol et.
    - Beklenen: Ekrandaki sayı `0` olarak kalır. Terminalde `sayaç: 1`, `sayaç: 2` ... satırları görünür. Yani değer artıyor ama ekran güncellenmiyor.
 2. **StatefulWidget'a dönüştür.** `class CounterPage` satırına tıkla, `Cmd+.` tuşlarına bas ve **Convert to StatefulWidget** seçeneğini seç.
    - Beklenen: Kod iki sınıfa ayrılır (`CounterPage` ve `_CounterPageState`).
-3. **setState ekle.** `sayac` değişkenini `_CounterPageState` sınıfının içine taşı (en üste yaz: `int sayac = 0;`). Düğmenin içinde `sayac++;` satırını `setState(() { sayac++; });` ile değiştir. Üstteki `int sayac = 0;` satırını sil.
-   - Beklenen: "Artır"a basınca ekrandaki sayı da artar.
+3. **Değişkeni taşı ve setState ekle.**
+   - Dosyanın en üstündeki `int sayac = 0;` satırını sil.
+   - Aynı satırı `_CounterPageState` sınıfının içine, `build`'in hemen üstüne yaz.
+   - Düğmenin içindeki `sayac++;` satırını şununla değiştir: `setState(() { sayac++; });`
+   - Beklenen: "Artır"a basınca ekrandaki sayı da artar. (Ekran değişmezse Hot Restart yap.)
 4. **Sıfırla düğmesi ekle.** Artır düğmesinin altına bir `ElevatedButton` daha koy; basınca `sayac = 0` olsun (`setState` içinde).
    - Beklenen: Sıfırla'ya basınca sayı `0` olur.
 5. **Metin kutusu ekle.** `State` sınıfına `final _controller = TextEditingController();` yaz. Ekrana `TextField(controller: _controller)` ekle.
